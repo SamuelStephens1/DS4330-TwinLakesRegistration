@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1945.72" height="1182.259" viewBox="0 0 1945.72 1182.259">
+  <defs>
+    <clipPath id="clip-path">
+      <rect width="1945.72" height="1182.259" fill="none"/>
+    </clipPath>
+    <linearGradient id="linear-gradient" x1="-0.052" y1="-0.243" x2="0.676" y2="0.821" gradientUnits="objectBoundingBox">
+      <stop offset="0"/>
+      <stop offset="1" stop-color="#005581"/>
+    </linearGradient>
+    <filter id="Path_42" x="0" y="0" width="1945.72" height="1182.259" filterUnits="userSpaceOnUse">
+      <feOffset dy="30" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="25" result="blur"/>
+      <feFlood flood-opacity="0.2"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Repeat_Grid_10" data-name="Repeat Grid 10" clip-path="url(#clip-path)">
+    <g transform="translate(-413.836 111)">
+      <g transform="matrix(1, 0, 0, 1, 413.84, -111)" filter="url(#Path_42)">
+        <path id="Path_42-2" data-name="Path 42" d="M-9671.164,0s226.219,164.347,341.358,572.467,210.819,625.84,1071.733,306.948,0-879.415,0-879.415Z" transform="translate(9746.16 45)" fill="url(#linear-gradient)"/>
+      </g>
+    </g>
+  </g>
+</svg>
