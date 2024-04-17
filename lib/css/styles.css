@@ -16,7 +16,7 @@
 body {
     margin: 0; /* Ensure no default margin */
     padding: 0; /* Ensure no default padding */
-    background-image: url('lib/img/TW-Swoop-resize.png');
+    background-image: url('img/TW-Swoop-resize.png');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover; /* Ensure the background covers the entire viewport */
