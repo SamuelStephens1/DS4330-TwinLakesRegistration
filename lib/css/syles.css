@@ -1,0 +1,26 @@
+#btnLogin.btn:focus {
+            
+    background-color: rgb(141, 198, 63) !important; 
+}
+.card-header {
+    display: flex;
+    align-items: center;
+    background-color: rgb(141, 198, 63) !important;
+}
+
+.card-header img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px; 
+}
+body {
+    margin: 0; /* Ensure no default margin */
+    padding: 0; /* Ensure no default padding */
+    background-image: url('lib/img/TW-Swoop-resize.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover; /* Ensure the background covers the entire viewport */
+    background-position: center; /* Center the background image */
+    height: 100vh; /* Set the height of the body to the full viewport height */
+    overflow: hidden;
+}
