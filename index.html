@@ -38,8 +38,28 @@
                 <h3 class="mb-0">Member Login</h3>
             </div>
             <div class="card-body">
-                <button id="btn02Lookup" type="button" class="btn bg-success mt-3 col-12 text-white">Login</button>
-                <button id="btn02Cancel" type="button" class="btn bg-primary mt-1 col-12 text-white">Forgot Login</button>
+                <form>
+                    <div class="form-group">
+                        <label for="txtLookupFname" class="form-label">First Name:</label>
+                        <input id="txtLookupFname" class="form-control" type="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="txtLookupLname" class="form-label">Last Name:</label>
+                        <input id="txtLookupLname" type="name" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="txtLookupAddress" class="form-label">Address:</label>
+                        <input id="txtLookupAddress" class="form-control" type="address">
+                    </div>
+                    <div class="form-group">
+                        <label for="txtLookupPhone" class="form-label">Phone:</label>
+                        <input id="txtLookupPhone" type="phone" class="form-control">
+                    </div>
+                    <button id="btn01Login" type="button" class="btn bg-success mt-3 col-12 text-white">Login</button>
+                    <button id="btn01Forgot" type="button" class="btn bg-primary mt-1 col-12 text-white">Forgot Login</button>
+                </form>
+                <button id="btn01Login" type="button" class="btn bg-success mt-3 col-12 text-white">Look-up</button>
+                <button id="btn01Forgot" type="button" class="btn bg-primary mt-1 col-12 text-white">Cancel</button>
             </div>
         </div>
         <div class="card" style="width: 20rem; display: none;" id="divMemberSelection">
