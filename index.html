@@ -60,15 +60,60 @@
                 <button id="btn02Cancel" type="button" class="btn bg-primary mt-1 col-12 text-white">Cancel</button>
             </div>
         </div>
-        <div class="card" style="width: 20rem; display: none;" id="divMemberSelection">
+        <div class="card" style="width: 60rem; display: none;" id="divMemberSelection">
             <div class="card-header bg-success text-white">
                 <img src="lib/css/img/TWLogo.jpg" alt="Twin Lakes Logo">
                 <h3 class="mb-0">Select Customer</h3>
             </div>
             <div class="card-body">
-                <button id="btn03Select" type="button" class="btn bg-success mt-3 col-12 text-white">Select</button>
-                <button id="btn03Cancel" type="button" class="btn bg-primary mt-1 col-12 text-white">Cancel</button>
-            </div>
+                <div class="row">
+                    <div class="card p-2 col" id="divCustomer1" style="width: 20rem">
+                        <label id="txtCustomerLabel1" class="border border-success-subtle mb-1 p-1 text-center"><b>Customer 1</b></label>
+                        <form>
+                            <div class="form-group">
+                                <label for="txtSelectFname" class="form-label">First Name:</label>
+                                <input id="txtSelectFname" class="form-control" type="name" disabled>
+                            </div>
+                            <div class="form-group">
+                                <label for="txtSelectLname" class="form-label">Last Name:</label>
+                                <input id="txtSelectLname" type="name" class="form-control" disabled>
+                            </div>
+                            <div class="form-group">
+                                <label for="txtSelectAddress" class="form-label">Address:</label>
+                                <input id="txtSelectAddress" class="form-control" type="address" disabled>
+                            </div>
+                            <div class="form-group">
+                                <label for="txtLookupPhone" class="form-label">Phone:</label>
+                                <input id="txtLookupPhone" type="phone" class="form-control" disabled>
+                            </div>
+                        </form>
+                        <button id="btn03Select" type="button" class="btn bg-success mt-2 col-12 text-white">Select</button>
+                    </div>
+                    <div class="card p-2 col" id="divCustomer2" style="width: 20rem">
+                        <label id="txtCustomerLabel2" class="border border-success-subtle mb-1 p-1 text-center"><b>Customer 2</b></label>
+                        <form>
+                            <div class="form-group">
+                                <label for="txtSelectFname" class="form-label">First Name:</label>
+                                <input id="txtSelectFname" class="form-control" type="name" disabled>
+                            </div>
+                            <div class="form-group">
+                                <label for="txtSelectLname" class="form-label">Last Name:</label>
+                                <input id="txtSelectLname" type="name" class="form-control" disabled>
+                            </div>
+                            <div class="form-group">
+                                <label for="txtSelectAddress" class="form-label">Address:</label>
+                                <input id="txtSelectAddress" class="form-control" type="address" disabled>
+                            </div>
+                            <div class="form-group">
+                                <label for="txtLookupPhone" class="form-label">Phone:</label>
+                                <input id="txtLookupPhone" type="phone" class="form-control" disabled>
+                            </div>
+                        </form>
+                        <button id="btn03Select" type="button" class="btn bg-success mt-2 col-12 text-white">Select</button>
+                    </div>
+                </div>
+            <button id="btn03Cancel" type="button" class="btn bg-primary mt-1 col-12 text-white">Cancel</button>
+        </div>
         </div>
         <div class="card" style="width: 50rem; display: none;" id="divTicketConfirmation">
             <div class="card-header bg-success text-white">
@@ -76,6 +121,30 @@
                 <h3 class="mb-0">Check Your Ticket</h3>
             </div>
             <div class="card-body">
+                <div class="form-group">
+                    <label for="txtTicketFname" class="form-label">First Name:</label>
+                    <input id="txtTicketFname" class="form-control" type="name" disabled>
+                </div>
+                <div class="form-group">
+                    <label for="txtTicketLname" class="form-label">Last Name:</label>
+                    <input id="txtTicketLname" type="name" class="form-control" disabled>
+                </div>
+                <div class="form-group">
+                    <label for="txtTicketCustID" class="form-label">Customer ID:</label>
+                    <input id="txtTicketCustID" type="text" class="form-control" disabled>
+                </div>
+                <div class="form-group">
+                    <label for="txtTicketAddress" class="form-label">Address:</label>
+                    <input id="txtTicketAddress" class="form-control" type="address" disabled>
+                </div>
+                <div class="form-group">
+                    <label for="txtTicketPhone" class="form-label">Phone:</label>
+                    <input id="txtTicketPhone" type="phone" class="form-control" disabled>
+                </div>
+                <div class="form-group">
+                    <label for="txtTicketEmail" class="form-label">Email:</label>
+                    <input id="txtTicketEmail" type="email" class="form-control" disabled>
+                </div>
                 <button id="btn04Verify" type="button" class="btn bg-success mt-3 col-12 text-white">Information is Correct</button>
                 <button id="btn04Corrections" type="button" class="btn bg-primary mt-1 col-12 text-white">Information is Incorrect</button>
             </div>
