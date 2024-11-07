@@ -43,7 +43,7 @@ app.get('/:zip/:phone', (req, res, next) => {
         var request = new sql.Request();
 
         // Use parameterized query to prevent SQL injection
-        const query = "SELECT * FROM data WHERE service_zip = @zip and phone = @phone";
+        const query = "SELECT member_number, name, phone, customer_type, service_address FROM data WHERE service_zip = @zip and phone = @phone group by member_number, name, phone, customer_type, service_address";
 
         // Add the parameters to the SQL query
         request.input('zip', sql.VarChar, zip);
@@ -65,7 +65,7 @@ app.get('/:zip/:phone', (req, res, next) => {
 });
 
 //request for advanced search
-app.get('/:name/:address/:county', (req, res, next) => {
+app.get('/adv/:name/:address/:county', (req, res, next) => {
     
     // Close any previous SQL connections
     sql.close();
@@ -89,7 +89,7 @@ app.get('/:name/:address/:county', (req, res, next) => {
         var request = new sql.Request();
 
         // Use parameterized query to prevent SQL injection
-        const query = "SELECT * FROM data WHERE name = @name or service_address = @address or service_county = @county";
+        const query = "SELECT member_number, name, phone, customer_type, service_address FROM data WHERE name = @name or service_address = @address or service_county = @county group by member_number, name, phone, customer_type, service_address";
 
         // Add the parameters to the SQL query
         request.input('name', sql.VarChar, name);
