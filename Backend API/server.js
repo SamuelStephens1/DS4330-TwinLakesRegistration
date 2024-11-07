@@ -43,7 +43,7 @@ app.get('/:zip/:phone', (req, res, next) => {
         var request = new sql.Request();
 
         // Use parameterized query to prevent SQL injection
-        const query = "SELECT member_number, name, phone, customer_type, service_address FROM data WHERE service_zip = @zip and phone = @phone group by member_number, name, phone, customer_type, service_address";
+        const query = "SELECT member_number, name, phone, customer_type, service_address FROM data WHERE billing_zip = @zip and phone = @phone group by member_number, name, phone, customer_type, service_address";
 
         // Add the parameters to the SQL query
         request.input('zip', sql.VarChar, zip);
