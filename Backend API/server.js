@@ -65,13 +65,14 @@ app.get('/:zip/:phone', (req, res, next) => {
 });
 
 //request for advanced search
-app.get('/adv/:name/:county', (req, res, next) => {
+app.get('/adv/:name/:address/:county', (req, res, next) => {
     
     // Close any previous SQL connections
     sql.close();
 
     // Get the parameters from the request URL
     const name = req.params.name;
+    const address = req.params.address;
     const county = req.params.county;
 
     // Connect to your database
@@ -88,10 +89,11 @@ app.get('/adv/:name/:county', (req, res, next) => {
         var request = new sql.Request();
 
         // Use parameterized query to prevent SQL injection
-        const query = "SELECT member_number, name, phone, customer_type, service_address, billing_zip FROM data WHERE name = @name or service_county = @county group by member_number, name, phone, customer_type, service_address, billing_zip";
+        const query = "SELECT member_number, name, phone, customer_type, service_address, billing_zip FROM data WHERE name = @name or service_address = @address or service_county = @county group by member_number, name, phone, customer_type, service_address, billing_zip";
 
         // Add the parameters to the SQL query
         request.input('name', sql.VarChar, name);
+        request.input('address', sql.VarChar, address);
         request.input('county', sql.VarChar, county);
 
         // Execute the query
