@@ -43,7 +43,7 @@ app.get('/:zip/:phone', (req, res, next) => {
         var request = new sql.Request();
 
         // Use parameterized query to prevent SQL injection
-        const query = "SELECT member_number, name, phone, customer_type, service_address, billing_zip FROM data WHERE billing_zip = @zip and phone = @phone group by member_number, name, phone, customer_type, service_address";
+        const query = "SELECT member_number, name, phone, customer_type, service_address, billing_zip FROM data WHERE billing_zip = @zip and phone = @phone group by member_number, name, phone, customer_type, service_address, billing_zip";
 
         // Add the parameters to the SQL query
         request.input('zip', sql.VarChar, zip);
@@ -89,7 +89,7 @@ app.get('/adv/:name/:address/:county', (req, res, next) => {
         var request = new sql.Request();
 
         // Use parameterized query to prevent SQL injection
-        const query = "SELECT member_number, name, phone, customer_type, service_address, billing_zip FROM data WHERE name = @name or service_address = @address or service_county = @county group by member_number, name, phone, customer_type, service_address";
+        const query = "SELECT member_number, name, phone, customer_type, service_address, billing_zip FROM data WHERE name = @name or service_address = @address or service_county = @county group by member_number, name, phone, customer_type, service_address, billing_zip";
 
         // Add the parameters to the SQL query
         request.input('name', sql.VarChar, name);
