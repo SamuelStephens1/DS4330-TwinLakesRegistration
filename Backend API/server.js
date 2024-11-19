@@ -64,50 +64,6 @@ app.get('/:zip/:phone', (req, res, next) => {
     });
 });
 
-//request for advanced search
-app.get('/adv/:name/:county', (req, res, next) => {
-    
-    // Close any previous SQL connections
-    sql.close();
-
-    // Get the parameters from the request URL
-    const name = req.params.name;
-    const county = req.params.county;
-
-    // Connect to your database
-    sql.connect(config, function (err) {
-
-        //error if no database connection
-        if (err) {
-            console.log(err);
-            res.status(500).send('Database connection error');
-            return;
-        }
-
-        // Create Request object
-        var request = new sql.Request();
-
-        // Use parameterized query to prevent SQL injection
-        const query = "SELECT member_number, name, phone, customer_type, service_address, billing_zip FROM data WHERE name = @name or service_county = @county group by member_number, name, phone, customer_type, service_address, billing_zip";
-
-        // Add the parameters to the SQL query
-        request.input('name', sql.VarChar, name);
-        request.input('county', sql.VarChar, county);
-
-        // Execute the query
-        request.query(query, function (err, result) {
-            if (err) {
-                console.log(err);
-                res.status(500).send('Query execution error');
-            } else {
-                res.json(result);
-            }
-
-            // Close the SQL connection
-            sql.close();
-        });
-    });
-});
 
 // This code tells the application to listen on the port we set at the top of the code.  Additionally, the console.log command allows us to have a visual representation in our command prompt or terminal telling us the node project is running and which port we should try to access it on. 
 app.listen(port, () => {
